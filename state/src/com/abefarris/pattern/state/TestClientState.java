@@ -1,4 +1,5 @@
 package com.abefarris.pattern.state;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -22,7 +23,7 @@ public class TestClientState {
 		assertFalse(sc.isStateChanged());
 		assertTrue(sc.getCurrentState() instanceof StateOpen);
 	}
-	
+
 	@Test
 	public void testOpenOPEN() {
 		final StateContext sc = new StateContext();
@@ -30,7 +31,7 @@ public class TestClientState {
 		sc.setMode("OPEN");
 		assertFalse(sc.isStateChanged());
 		assertTrue(sc.getCurrentState() instanceof StateOpen);
-	}	
+	}
 
 	@Test
 	public void testOpenBlank() {
@@ -58,7 +59,7 @@ public class TestClientState {
 		assertTrue(sc.isStateChanged());
 		assertTrue(sc.getCurrentState() instanceof StateOther);
 	}
-	
+
 	@Test
 	public void testOtherOther() {
 		final StateContext sc = new StateContext();
@@ -66,6 +67,6 @@ public class TestClientState {
 		sc.setMode("other");
 		assertFalse(sc.isStateChanged());
 		assertTrue(sc.getCurrentState() instanceof StateOther);
-	}	
+	}
 
 }
