@@ -1,3 +1,4 @@
+
 package com.abefarris.pattern.state;
 public class StateBase implements Statelike {
 	
